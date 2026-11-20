@@ -29,6 +29,9 @@ function friendlyAuthError(error) {
   const code = error?.code || '';
   if (code === 'auth/popup-closed-by-user') return 'Google sign-in was cancelled.';
   if (code === 'auth/network-request-failed') return 'Network error. Please try again.';
+  if (code === 'auth/unauthorized-domain') {
+    return 'This domain is not authorized. Please add it to Authorized Domains in Firebase Console.';
+  }
   return error?.message || 'Authentication failed. Please try again.';
 }
 
