@@ -30,9 +30,18 @@ function friendlyAuthError(error) {
   if (code === 'auth/popup-closed-by-user') return 'Google sign-in was cancelled.';
   if (code === 'auth/network-request-failed') return 'Network error. Please try again.';
   if (code === 'auth/unauthorized-domain') {
-    const host = typeof window !== 'undefined' ? window.location.hostname : 'your domain';
-    const project = auth?.app?.options?.projectId || 'hbplush-191ed';
-    return `Domain "${host}" is not authorized in Firebase project "${project}". Add "${host}" to Authentication > Settings > Authorized domains in Firebase Console.`;
+    const currentHost =
+      Platform.OS === 'web' && typeof window !== 'undefined'
+        ? window.location.hostname
+        : '';
+    const projectId =
+      auth?.app?.options?.projectId ||
+      process.env.EXPO_PUBLIC_FIREBASE_PROJECT_ID ||
+      '';
+    if (currentHost && projectId) {
+      return `Domain "${currentHost}" is not authorized. Add "${currentHost}" in Firebase Console for project "${projectId}" (Authentication > Settings > Authorized domains).`;
+    }
+    return 'This domain is not authorized. Please add it to Authorized Domains in Firebase Console.';
   }
   return error?.message || 'Authentication failed. Please try again.';
 }
