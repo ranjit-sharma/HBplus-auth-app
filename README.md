@@ -2,6 +2,8 @@
 
 A cross-platform React Native application for web, Android, and iOS. It authenticates users with Google through Firebase and restricts access to accounts whose email addresses end in `@hbplus.fit`.
 
+**Live Demo / Deployed Link:** [https://hbplus-auth-app-lf2n.netlify.app/](https://hbplus-auth-app-lf2n.netlify.app/)
+
 ## Features
 
 - Google Sign-In
