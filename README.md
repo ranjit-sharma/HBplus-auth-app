@@ -170,11 +170,3 @@ Access restricted. Please login using your official domain email.
 ```
 
 Network, popup cancellation, and other Firebase authentication failures also produce user-friendly messages.
-
-## Security Notes
-
-- Do not expose private service-account keys in the frontend.
-- The Firebase web API key identifies the Firebase project and is not a private credential.
-- Keep `.env` local and do not commit it.
-- Deploy Firestore rules and restrict access by both authentication state and email domain.
-- Use HTTPS and authorized domains in production.
