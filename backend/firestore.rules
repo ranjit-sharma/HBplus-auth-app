@@ -1,0 +1,29 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    function isOfficialMember() {
+      return request.auth != null
+        && request.auth.token.email != null
+        && request.auth.token.email.matches('.*@hbplus\\.fit$');
+    }
+
+    match /users/{uid} {
+      allow read: if isOfficialMember() && request.auth.uid == uid;
+      allow create: if isOfficialMember()
+        && request.auth.uid == uid
+        && request.resource.data.uid == uid
+        && request.resource.data.role == 'User'
+        && request.resource.data.email == request.auth.token.email;
+      allow update: if isOfficialMember()
+        && request.auth.uid == uid
+        && request.resource.data.uid == uid
+        && request.resource.data.role == resource.data.role
+        && request.resource.data.email == resource.data.email;
+      allow delete: if false;
+    }
+
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}

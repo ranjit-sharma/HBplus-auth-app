@@ -1,0 +1,16 @@
+frontend/node_modules/
+frontend/dist/
+frontend/.expo/
+frontend/.env
+frontend/.env.local
+frontend/.env.*.local
+
+frontend/android/.gradle/
+frontend/android/build/
+frontend/android/app/build/
+frontend/android/local.properties
+frontend/android/**/*.keystore
+frontend/android/**/*.jks
+frontend/ios/Pods/
+frontend/ios/build/
+*.log

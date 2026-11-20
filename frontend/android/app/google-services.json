@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "177485625654",
+    "project_id": "hbplush-191ed",
+    "storage_bucket": "hbplush-191ed.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:177485625654:android:37198c8c96c229957e1b97",
+        "android_client_info": {
+          "package_name": "android.hb"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "177485625654-lfvnrref3ou00rk5gke9o3l29da4o.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDpFhQCB-T0Joc6As_FngxJHBU2GAkkFF0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "177485625654-lfvnrref3ou00rk5gke9o3l29da4o.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

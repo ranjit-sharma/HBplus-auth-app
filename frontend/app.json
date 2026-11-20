@@ -1,0 +1,32 @@
+{
+  "expo": {
+    "name": "HB+",
+    "slug": "hb-plus-auth",
+    "version": "1.0.0",
+    "scheme": "hb-plus-auth",
+    "icon": "./assets/hb-plus-logo.png",
+    "orientation": "portrait",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/hb-plus-logo.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#F8FAFC"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "ios.hb",
+      "googleServicesFile": "./GoogleService-Info.plist"
+    },
+    "android": {
+      "package": "android.hb",
+      "googleServicesFile": "./google-services.json"
+    },
+    "web": {
+      "bundler": "metro",
+      "favicon": "./assets/hb-plus-logo.png"
+    },
+    "plugins": [
+      "expo-asset"
+    ]
+  }
+}
