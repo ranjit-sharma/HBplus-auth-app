@@ -22,7 +22,6 @@ frontend/                 Expo React Native application
   src/components/         Shared UI and route protection
   src/screens/            Login and dashboard screens
   src/utils/              Domain validation
-  .env                    Local environment configuration
 
 backend/
   firebase.json           Firebase CLI configuration
@@ -47,30 +46,7 @@ cd C:\Users\ranji\Desktop\HB+\frontend
 npm install
 ```
 
-### 2. Configure environment variables
-
-Create `frontend/.env` with the application credentials:
-
-```env
-EXPO_PUBLIC_FIREBASE_API_KEY=YOUR_API_KEY
-EXPO_PUBLIC_FIREBASE_AUTH_DOMAIN=YOUR_PROJECT_ID.firebaseapp.com
-EXPO_PUBLIC_FIREBASE_PROJECT_ID=YOUR_PROJECT_ID
-EXPO_PUBLIC_FIREBASE_STORAGE_BUCKET=YOUR_PROJECT_ID.firebasestorage.app
-EXPO_PUBLIC_FIREBASE_MESSAGING_SENDER_ID=YOUR_MESSAGING_SENDER_ID
-EXPO_PUBLIC_FIREBASE_APP_ID=YOUR_APP_ID
-EXPO_PUBLIC_FIREBASE_MEASUREMENT_ID=YOUR_MEASUREMENT_ID
-
-EXPO_PUBLIC_GOOGLE_WEB_CLIENT_ID=YOUR_WEB_CLIENT_ID
-EXPO_PUBLIC_GOOGLE_IOS_CLIENT_ID=YOUR_IOS_CLIENT_ID
-EXPO_PUBLIC_GOOGLE_ANDROID_CLIENT_ID=YOUR_ANDROID_CLIENT_ID
-
-EXPO_PUBLIC_ALLOWED_DOMAIN=@hbplus.fit
-EXPO_PUBLIC_OAUTH_SCHEME=hb-plus-auth
-```
-
-Do not commit `.env`. It contains project-specific configuration.
-
-### 3. Enable Firebase Authentication
+### 2. Enable Firebase Authentication
 
 In Firebase Console:
 
@@ -79,7 +55,7 @@ In Firebase Console:
 3. Enable **Google**.
 4. Add `localhost` to **Authentication > Settings > Authorized domains** for web testing.
 
-### 4. Configure native applications
+### 3. Configure native applications
 
 Android:
 
@@ -93,7 +69,7 @@ iOS:
 - Ensure the bundle identifier matches the Firebase iOS app.
 - Configure macOS/Xcode and the iOS OAuth URL scheme.
 
-### 5. Deploy Firestore rules
+### 4. Deploy Firestore rules
 
 Using Firebase CLI:
 
