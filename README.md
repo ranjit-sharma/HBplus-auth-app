@@ -44,7 +44,7 @@ backend/
 ### 1. Install frontend dependencies
 
 ```powershell
-cd C:\Users\ranji\Desktop\HB+\frontend
+cd frontend
 npm install
 ```
 
@@ -76,7 +76,7 @@ iOS:
 Using Firebase CLI:
 
 ```powershell
-cd C:\Users\ranji\Desktop\HB+\backend
+cd HB+\backend
 firebase use YOUR_PROJECT_ID
 firebase deploy --only firestore:rules
 ```
@@ -88,7 +88,7 @@ The rules in `backend/firestore.rules` allow official-domain users to read or cr
 Web:
 
 ```powershell
-cd C:\Users\ranji\Desktop\HB+\frontend
+cd HB+\frontend
 npm run dev
 ```
 
@@ -97,14 +97,14 @@ Open `http://localhost:8081`.
 Android:
 
 ```powershell
-cd C:\Users\ranji\Desktop\HB+\frontend
+cd HB+\frontend
 npx expo run:android
 ```
 
 iOS:
 
 ```powershell
-cd C:\Users\ranji\Desktop\HB+\frontend
+cd HB+\frontend
 npx expo run:ios
 ```
 
